@@ -6,6 +6,10 @@ import { HelpComponent } from './help/help.component';
 import { ContractComponent } from './contract/contract.component';
 import { ErrorPagesComponent } from './error-pages/error-pages.component';
 import { RouterModule } from '@angular/router';
+import { AvisoLegalComponent } from './aviso-legal/aviso-legal.component';
+import { CookiesComponent } from './cookies/cookies.component';
+import { PrivacidadComponent } from './privacidad/privacidad.component';
+import { ConocenosComponent } from './conocenos/conocenos.component';
 
 
 
@@ -15,7 +19,11 @@ import { RouterModule } from '@angular/router';
     CallMeComponent,
     HelpComponent,
     ContractComponent,
-    ErrorPagesComponent
+    ErrorPagesComponent,
+    AvisoLegalComponent,
+    CookiesComponent,
+    PrivacidadComponent,
+    ConocenosComponent
   ],
   exports: [
     HomeComponent,
