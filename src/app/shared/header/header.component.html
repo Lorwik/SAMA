@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark prueba">
   <div class="container-fluid">
     
-      <a class="navbar-brand" href="#">SAMA</a>
+      <a class="navbar-brand" routerLink="./home">SAMA</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,16 +9,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">Inicio</a>
+            <a class="nav-link" routerLink="./contract" routerLinkActive="active-link">Tarifa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="./contract">Contrato</a>
+            <a class="nav-link" routerLink="./call-me" routerLinkActive="active-link">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="./call-me">Contacta con Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="./help">Ayuda</a>
+            <a class="nav-link" routerLink="./help" routerLinkActive="active-link">Ayuda</a>
           </li>
         </ul>
         <div class="d-flex justify-content-end">
