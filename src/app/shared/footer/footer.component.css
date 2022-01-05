@@ -2,8 +2,19 @@ li {
     list-style:none;
 }
 
-.footer {
+.submenu {
+    background-color: #F6F6F6;
+}
+
+.copyright {
     background-color: #213A4E;
     font-size: 12px;
-    color: #fff
+    color: #fff;
+}
+
+.footer {
+    position: relative;
+    clear: both;
+    margin-top: 0px;
+    padding-top: 0px;
 }
