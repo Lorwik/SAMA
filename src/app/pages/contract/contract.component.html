@@ -1,23 +1,23 @@
 <div class="container">
-    <form class="mt-5">
+    <form class="mt-5" [formGroup]="formulario">
         <h2 class="text-center"><b>CONTRATA TU <span class="rojo">NUEVA TARIFA</span> CON <span class="rojo">SAMA</span></b></h2>
         <!-- ################################################## -->
         <!-- ###################RADIO BUTTONS################## -->
         <!-- ################################################## -->
-        <div class="form-check mt-3">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <div class="form-check mt-3">
+            <input class="form-check-input" type="radio" name="tarifa" id="flexRadioDefault1" required>
             <label class="form-check-label" for="flexRadioDefault1">
               <b>MÓVIL</b>
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+            <input class="form-check-input" type="radio" name="tarifa" id="flexRadioDefault2" required>
             <label class="form-check-label" for="flexRadioDefault2">
                 <b>FIBRA + MÓVIL</b>
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+            <input class="form-check-input" type="radio" name="tarifa" id="flexRadioDefault3" required>
             <label class="form-check-label" for="flexRadioDefault3">
                 <b>SOLO FIBRA</b>
             </label>
@@ -27,27 +27,27 @@
         <!-- ################################################## -->
         <div class="mt-4"><span class="rojo">1. </span>¡COMENZAMOS!</div>
         <div class="mt-3 mb-3 d-md-flex gap-3 d-grid">
-            <input type="text" class="form-control" id="exampleInput1" placeholder="Nombre">
-            <input type="text" class="form-control" id="exampleInput2" placeholder="Apellido">
+            <input type="text" class="form-control" id="exampleInput1" placeholder="Nombre" formControlName="nombre">
+            <input type="text" class="form-control" id="exampleInput2" placeholder="Apellido" formControlName="apellido">
         </div>
         <div class="mt-2 d-md-flex gap-3 d-grid">
-            <input type="email" class="form-control" id="exampleInput3" placeholder="Email">
-            <input type="tel" class="form-control" id="tel" name="tel" placeholder="Teléfono de Contacto">
+            <input type="email" class="form-control" id="exampleInput3" placeholder="Email" formControlName="email">
+            <input type="tel" class="form-control" id="tel" name="tel" placeholder="Teléfono de Contacto" formControlName="telefono">
         </div>
         <!-- ################################################## -->
         <!-- ###########TU OPERADOR MÓVIL ACTUAL############### -->
         <!-- ################################################## -->
         <div class="mt-4"><span class="rojo">2. </span>TU OPERADOR MÓVIL ACTUAL</div>
         <div class="mt-3 mb-3 d-md-flex gap-3 d-grid">
-            <input type="text" class="form-control" id="exampleInput1">
+            <input type="text" class="form-control" id="exampleInput1" formControlName="operador">
         </div>
         <!-- ################################################## -->
         <!-- ############¿QUIERES CONSERVAR TU NÚMERO?######### -->
         <!-- ################################################## -->
         <div class="mt-4"><span class="rojo">3. </span>¿QUIERES CONSERVAR TU NÚMERO?</div>
         <div class="input-group mt-3">
-            <select class="form-select" id="inputGroupSelect04">
-              <option selected>Elige una..</option>
+            <select class="form-select" id="inputGroupSelect04" formControlName="conservar">
+              <option disabled>Elige una..</option>
               <option value="1">SÍ</option>
               <option value="2">NO</option>
             </select>
@@ -57,8 +57,8 @@
         <!-- ################################################## -->
         <div class="mt-4"><span class="rojo">4. </span>¿TIENES FIBRA CON TU COMPAÑÍA ACTUAL?</div>
         <div class="input-group mt-3">
-            <select class="form-select" id="inputGroupSelect04">
-              <option selected>Elige una..</option>
+            <select class="form-select" id="inputGroupSelect04" formControlName="fibra">
+              <option disabled>Elige una..</option>
               <option value="1">SÍ</option>
               <option value="2">NO</option>
             </select>
@@ -67,11 +67,13 @@
         <!-- ##TE LLAMAMOS GRATIS, SELECCIONA LA FECHA Y HORA## -->
         <!-- ################################################## -->
         <div class="mt-4"><span class="rojo">5. </span>TE LLAMAMOS GRATIS, SELECCIONA LA FECHA Y HORA</div>
-        <input class="form-select mt-3" type="datetime-local" name="datetime" id="datetime">
+        <input class="form-select mt-3" type="datetime-local" name="datetime" id="datetime" formControlName="llamamos">
         <!-- ################################################## -->
         <!-- ####################ENVIAR######################## -->
         <!-- ################################################## -->
-        <button type="submit" class="btn btn-dark btn-lg mb-5 mt-4">Enviar</button>
+        <button type="submit" [disabled]="formulario.invalid" class="btn btn-dark btn-lg mb-5 mt-4">Enviar</button>
         <!-- #####################FIN########################## -->
     </form>
+    <p>Form Value: {{ formulario.value | json }}</p>
+    <p>Form Status: {{ formulario.status | json }}</p>
 </div>
