@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { PopWhatsappComponent } from './pop-whatsapp/pop-whatsapp.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PopWhatsappComponent
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PopWhatsappComponent
   ],
   imports: [
     CommonModule,
