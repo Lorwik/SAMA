@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { HomeComponent } from './home/home.component';
 import { CallMeComponent } from './call-me/call-me.component';
 import { HelpComponent } from './help/help.component';
@@ -33,7 +35,8 @@ import { ConocenosComponent } from './conocenos/conocenos.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ]
 
 })
